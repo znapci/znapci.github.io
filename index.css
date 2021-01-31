@@ -1,0 +1,118 @@
+body{
+    margin: 0px;
+}
+.loader-init{
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #2c2b2b;
+    z-index: 1;
+}
+.loader-done{
+    border-radius: 10px;
+    animation: scale-down;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+}
+.container{
+    display: flex;
+    background: rgb(105, 104, 112);
+    background: linear-gradient(340deg, rgb(50, 49, 58) 0%, rgb(101, 119, 112) 76%, rgb(174, 197, 189) 100%);
+    background-size: contain;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.card-init {
+    transition: 1s;
+    transition-delay: 0.7s;
+    transform: scale(0);
+    transition-timing-function: cubic-bezier(.25,.16,.27,1.55);
+}
+.card {
+    transform: scale(1);
+    display: flex;
+    position: relative;
+    background-color: #ffffff;
+    min-height: 500px;
+    min-width: 300px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box-itm {
+    display: block;
+    position: absolute;
+}
+.first {
+    transition: transform 0.8s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    top:20px;
+    height: 190px;
+    width: 200px;
+}
+.second {
+    overflow: hidden;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    bottom: 55px;
+    font-size: 16px;
+}
+
+.third {
+    display: flex;
+    height: 25px;
+    width: 200px;
+    bottom: 20px;
+    justify-content: space-between;
+}
+.first:active{
+   transform: scale(1.2);
+}
+.icons{
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.icons:hover{
+    transform: scale(1.4);
+}
+.icons:active{
+        transform: scale(0.7);
+        transition: transform 0.1s;
+}
+.p-eyes{
+    transition: 0.3s;
+    
+}
+.first:hover .p-eyes{
+    transform:translateX(5%);
+    
+}
+.first:active .p-eyes{
+    transform:translateX(5%);
+    fill: #8984E0;
+ }
+ .load-complete-pic{
+     animation: scale-up-down;
+     animation-duration: 1s;
+     animation-delay: 1s;
+     animation-timing-function: ease-in-out;
+ }
+
+@keyframes scale-up-down{
+    50%{
+        transform: scale(1.2);
+    }
+}
+@keyframes scale-down{
+        100%{
+            transform: scale(0);
+        }
+}
