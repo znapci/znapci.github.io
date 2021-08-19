@@ -15,7 +15,7 @@ body{
     display: flex;
     position: relative;
     background-color: #ffffff;
-    min-width: 40vw;
+    width: 300px;
     border-radius: 20px;
     justify-content: space-around;
     align-items: center;
@@ -23,21 +23,20 @@ body{
 }
 .box-itm {
     display: block;
+    width: 80%;
 }
 .first {
+    display: block;
     transition: transform 0.8s;
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
     margin-top: 2vh;
     margin-bottom: 2vh;
     height: 33%;
-    width: 200px;
-
 }
 .second {
     overflow: hidden;
     text-align: center;
     height: 33%;
-    width: 200px;
     margin-top: 2vh;
     margin-bottom: 2vh;
     font-size: 1.1rem;
@@ -46,7 +45,6 @@ body{
 .third {
     display: flex;
     height: 33%;
-    width: 200px;
     margin-top: 2vh;
     margin-bottom: 2vh;
     justify-content: space-between;
@@ -59,8 +57,6 @@ body{
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
     padding-right: 4px;
     padding-left: 4px;
-    height: 4vh;
-    width: 4vh;
 }
 .icons:hover{
     transform: scale(1.4);
@@ -71,30 +67,26 @@ body{
 }
 .p-eyes{
     transition: 0.3s;
-    
 }
 .first:hover .p-eyes{
     transform:translateX(5%);
-    
 }
 .first:active .p-eyes{
     transform:translateX(5%);
  }
 
 @media (max-width: 500px) {
+    .container{
+        background-color: #ffffff;
+    }
     .card{
-        height: 100vh;
-        width: 100vw;
         background: initial;
-    }
-    .first{
-        height: 80vw;
         width: 80vw;
     }
-    .second{
-        width: 80vw;
+    .box-itm{
+        width: 80%;
     }
     .third{
-        width: 80vw;
+        justify-content: space-around;
     }
 }
